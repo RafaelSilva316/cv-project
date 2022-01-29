@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import GeneralInfo from "./components/GeneralInfo";
+import Education from "./components/Education";
+import EducationSection from "./components/EducationSection";
+import WorkSection from "./components/WorkSection";
 
 class App extends Component {
   constructor(props) {
@@ -31,10 +34,13 @@ class App extends Component {
     return (
       <div className="App">
         <Header
+          className="Header"
           onEditMode={this.handleEditMode}
           onPreviewMode={this.handlePreviewMode}
         />
         <GeneralInfo editMode={this.state.editMode} />
+        <WorkSection editMode={this.state.editMode} />
+        <EducationSection editMode={this.state.editMode} />
       </div>
     );
   }

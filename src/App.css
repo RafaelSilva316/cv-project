@@ -15,16 +15,23 @@ body {
   font-weight: 400;
   color: #555;
   overflow-x: hidden;
-  background-color: #eee;
+  background-color: #ccc;
   padding: 3.6rem;
 }
 
 nav {
   text-align: center;
+  grid-column: span 2;
 }
 
 .root {
   margin: 0 auto;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4.8rem;
 }
 
 nav button {
@@ -39,7 +46,7 @@ nav button {
   text-transform: uppercase;
   font-size: 1.8rem;
   cursor: pointer;
-  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 nav button:hover {
@@ -53,14 +60,47 @@ nav button:active {
   background-color: rgb(43, 73, 73);
 }
 
+.work-section {
+  grid-row: span 2;
+}
+
 .gen-info-box,
 .gen-info-form {
+  background-color: #fff;
   font-size: 1.6rem;
-  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
+  /* box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.05); */
   padding: 1.8rem;
+  margin-bottom: 3.2rem;
 }
 
 .gen-info-box p,
 .gen-info-form input {
   margin-bottom: 1.8rem;
+}
+
+h2 {
+  margin-bottom: 2.4rem;
+  font-size: 2.4rem;
+}
+
+.delete-btn {
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: rgb(255, 115, 115);
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 100px;
+  color: #fff;
+  font-weight: 900;
+}
+
+.delete-btn:hover {
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-color: rgb(250, 144, 144);
+}
+
+.delete-btn:active {
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0);
+  cursor: pointer;
+  background-color: rgb(177, 67, 67);
 }

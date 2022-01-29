@@ -23,6 +23,7 @@ class GeneralInfo extends Component {
     if (!this.props.editMode) {
       return (
         <div className="gen-info-box">
+          <h2>Gen Info</h2>
           <p>Name: {name}</p>
           <p>email: {email}</p>
           <p>phone: {phone}</p>
@@ -32,6 +33,7 @@ class GeneralInfo extends Component {
     } else {
       return (
         <form className="gen-info-form">
+          <h2>Gen Info</h2>
           <div>
             <label>Name</label>
             <input

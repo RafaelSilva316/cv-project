@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-class Education extends Component {
+class Work extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      degree: "",
+      responsibilities: "",
       name: "",
       to: "",
       from: "",
@@ -22,15 +22,16 @@ class Education extends Component {
 
   render() {
     console.log(this.props.editMode);
-    const { name, degree, to, from, city, description } = this.state;
+    const { name, responsibilities, to, from, city, description } = this.state;
     if (!this.props.editMode) {
       return (
         <div className="gen-info-box">
-          <p>School Name: {name}</p>
-          <p>Degree: {degree}</p>
+          <p>Employer: {name}</p>
+
           <p>From: {from}</p>
           <p>To: {to}</p>
           <p>City: {city}</p>
+          <p>Responsibilities: {responsibilities}</p>
           <p>Description: {description}</p>
         </div>
       );
@@ -44,7 +45,7 @@ class Education extends Component {
             X
           </button>
           <div>
-            <label>School Name</label>
+            <label>Employer</label>
             <input
               type="text"
               name="name"
@@ -81,15 +82,14 @@ class Education extends Component {
             />
           </div>
           <div>
-            <div>
-              <label>Degree/Certification/Accomplishment</label>
-              <input
-                type="text"
-                name="degree"
-                value={degree}
-                onChange={this.handleInputChange}
-              />
-            </div>
+            <label>Responsibilities</label>
+            <textarea
+              value={responsibilities}
+              name="responsibilities"
+              onChange={this.handleInputChange}
+            ></textarea>
+          </div>
+          <div>
             <label>Additional Description</label>
             <textarea
               value={description}
@@ -103,4 +103,4 @@ class Education extends Component {
   }
 }
 
-export default Education;
+export default Work;
